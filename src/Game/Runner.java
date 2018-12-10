@@ -1,9 +1,10 @@
 package Game;
 
 import People.Person;
+import Rooms.GameRoom;
 import Rooms.Room;
 import Rooms.WinningRoom;
-	
+
 import java.util.Scanner;
 
 public class Runner {
@@ -29,6 +30,9 @@ public class Runner {
 		int x = (int)(Math.random()*building.length);
 		int y = (int)(Math.random()*building.length);
 		building[x][y] = new WinningRoom(x, y);
+
+		//Create a GameRoom.
+		building[1][2] = new GameRoom(x, y);
 		 
 		 //Setup player 1 and the input scanner
 		Person player1 = new Person("FirstName", "FamilyName", 0,0);
